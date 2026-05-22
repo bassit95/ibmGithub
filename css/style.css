@@ -2,4 +2,65 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #111, #1e3c72);
+}
+
+/* CADRE PRINCIPAL */
+.frame {
+    width: 400px;
+    padding: 40px;
+    border-radius: 20px;
+    background: rgba(255,255,255,0.08);
+    border: 2px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    text-align: center;
+    color: white;
+
+    animation: float 4s ease-in-out infinite;
+}
+
+/* TITRE */
+.frame h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* BOUTON */
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #00c6ff;
+    color: white;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0072ff;
+    transform: scale(1.05);
+}
+
+/* ANIMATION DU CADRE */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+/* ANIMATION JS ACTIVE */
+.active {
+    transform: scale(1.05);
+    transition: 0.3s;
+    border-color: #00c6ff;
 }
